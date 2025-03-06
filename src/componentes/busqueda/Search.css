@@ -1,0 +1,502 @@
+
+/* Variables CSS para colores y valores comunes */
+:root {
+  --primary-color:#fab780;
+  --primary-hover: #e68326;
+  --secondary-color: #6b7280;
+  --background-color: #f3f4f6;
+  --border-color: #e5e7eb;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --error-color: #dc2626;
+  --success-color: #059669;
+  --white: #ffffff;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.2);
+  
+}
+
+/* Contenedor general */
+.container {
+  display: flexbox;
+  flex-direction: row;
+  max-width: 1300px;
+  margin: 6rem auto;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+  position: relative;
+}
+.search-image{
+  position: absolute;
+  width: 180px; 
+  height: auto;
+}
+/* Barra lateral */
+.sidebar {
+  width: 250px;
+  height: auto;
+  background-color: var(--background-color);
+  box-shadow: var(--shadow-sm);
+  border-radius: 12px;
+  position: absolute;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(-100%); /* Oculta la barra inicialmente */
+  opacity: 0;
+}
+
+.sidebar.sidebar-open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.sidebar.sidebar-closed {
+  transform: translateX(-100%);
+}
+.search-image, .container-1,
+.results-container {
+  flex: 1; /* Toma el espacio restante */
+  transition: margin-left 0.3s ease-in-out;
+  padding: 1rem;
+}
+
+.container.sidebar-open .container-1,
+.container.sidebar-open .results-container,
+.container.sidebar-open .search-image {
+  margin-left: 260px; /* Ajusta este valor según el ancho de la barra */
+}
+
+/* Título de la barra lateral */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.sidebar-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sidebar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.clear-history-btn, .close-sidebar-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-history-btn:hover, .close-sidebar-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.clear-history-btn:active, .close-sidebar-btn:active {
+  background-color: var(--secondary-color);
+}
+
+/* Contenido de la barra lateral */
+.sidebar-content {
+  overflow-y: auto;
+}
+
+.empty-history {
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.history-item {
+  margin-bottom: 1rem;
+  background-color: var(--white);
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.history-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-item-header h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.remove-item-btn {
+  background-color: var(--error-color);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-item-btn:hover {
+  background-color: #b91c1c;
+}
+
+.history-item-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* Botón de toggle de la barra lateral */
+.toggle-sidebar-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+}
+
+.toggle-sidebar-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.title {    
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+.container-filters {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 1rem; 
+  margin-bottom: 4rem; 
+  width: 100%; 
+}
+.Titles-two{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-right: 0.5rem; 
+  text-align: right;
+}
+
+.select {
+  padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: var(--white);
+}
+.select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  outline: none;
+}
+.select:hover {
+  border-color: var(--primary-color);
+}
+
+
+.Button {
+  display: block;
+  margin: 2rem auto 0; /* Centra el botón horizontalmente */
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.Button:hover {
+  background-color: var(--primary-hover);
+}
+
+.Button:disabled {
+  background-color: var(--secondary-color);
+  cursor: not-allowed;
+}
+
+/* Estilos de tabla de propiedades */
+.conatainer-table {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.conatainer-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+}
+
+.conatainer-table thead {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.conatainer-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.conatainer-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.conatainer-table tbody tr:hover {
+  background-color: var(--background-color);
+}
+
+.conatainer-table td {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.conatainer-table td button {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.conatainer-table td button:hover {
+  color: var(--primary-hover);
+}
+
+/* Estilos para características expandidas */
+.conatainer-table .characteristics-expanded {
+  background-color: var(--background-color);
+}
+
+.conatainer-table .characteristics-expanded td {
+  padding: 1rem;
+}
+
+.conatainer-table .characteristics-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.conatainer-table .characteristics-badge {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.conatainer-table .characteristics-badge:hover {
+  background-color: var(--primary-hover);
+}
+.results-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+  text-align: center;
+}
+
+.results-container h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+
+.suggestions-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.suggestion-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.suggestion-card h4 {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.suggestion-card .justification {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-info {
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.contact-info h5 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.contact-info strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin: 1rem auto;
+  border: 3px solid var(--border-color);
+  border-radius: 50%;
+  border-top-color: var(--text-primary);
+  animation: spin 1s linear infinite;
+}
+/* Estilo base para los botones sin borde */
+.export-actions {
+  text-align: right; /* Alineación a la derecha */
+  margin-top: 1rem;
+}
+.button-export {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem ;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+ 
+}
+
+.button-export:hover {
+  color: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.button-export:disabled {
+  color: var(--secondary-color);
+  cursor: not-allowed;
+}
+
+/* Agregar iconos junto al texto */
+.button-export svg {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.error {
+  color: #e53e3e;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff5f5;
+  border: 1px solid #feb2b2;
+}
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .conatainer-table {
+      overflow-x: auto;
+  }
+  
+  .conatainer-table table {
+      font-size: 0.9rem;
+  }
+  
+  .conatainer-table th,
+  .conatainer-table td {
+      padding: 0.75rem;
+  }
+  .suggestions-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .suggestion-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
