@@ -37,14 +37,12 @@ Todo esto con el fin de **mejorar la eficiencia comercial** y **reducir los tiem
 ### 🔝 Frontend
 
 - **React**: Interfaz de usuario interactiva y responsive  
-- **API Google Maps**: Visualización geográfica de propiedades  
 
 ---
 
 ## 🚀 Metodología de Desarrollo
 
 - **Framework Scrum**: Desarrollo ágil con entregas iterativas  
-- **GitHub**: Control de versiones y colaboración en equipo  
 
 ---
 
@@ -53,6 +51,5 @@ Todo esto con el fin de **mejorar la eficiencia comercial** y **reducir los tiem
 - ✅ Sistema de Login y Autenticación  
 - ✅ Filtrado Avanzado de Inmuebles  
 - ✅ Ingeniería de Prompts para IA  
-- ✅ Visualización de Datos Geoespaciales  
-- ✅ Sistema de Alertas y Recomendaciones  
+- ✅ Sistema de Recomendaciones  
 
