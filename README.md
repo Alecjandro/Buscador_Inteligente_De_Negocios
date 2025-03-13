@@ -58,5 +58,20 @@ Todo esto con el fin de **mejorar la eficiencia comercial** y **reducir los tiem
 
 ---
 
+## Vista Interfaz
 
+![Login](https://raw.githubusercontent.com/Alecjandro/Buscador_Inteligente_de_Negocios/main/public/Login.png)
 
+---
+
+![Busqueda-Historial](https://raw.githubusercontent.com/Alecjandro/Buscador_Inteligente_de_Negocios/main/public/Historial.png)
+
+---
+
+![SUgerencias](https://raw.githubusercontent.com/Alecjandro/Buscador_Inteligente_de_Negocios/main/public/Sugerencias.png)
+
+---
+
+![Reporte](https://raw.githubusercontent.com/Alecjandro/Buscador_Inteligente_de_Negocios/main/public/Reporte.png)
+
+---
