@@ -30,13 +30,16 @@ Todo esto con el fin de **mejorar la eficiencia comercial** y **reducir los tiem
 
 ### 🔙 Backend
 
-- **Python**: Procesamiento de datos y lógica de negocio  
+- **Python**: Procesamiento de datos y lógica de negocio
 - **API OpenAI**: Integración de IA para análisis predictivo y recomendaciones  
-- **MongoDB**: Base de datos para almacenamiento de perfiles e inmuebles  
+- **MongoDB**: Base de datos para almacenamiento de perfiles e inmuebles
+- **Flask**: Un microframework de Python ideal para APIs rápidas y ligeras.
+- **Cors**: Utilizado para permitir que el frontend en React pueda comunicarse correctamente con el backend en Flask.
 
 ### 🔝 Frontend
 
-- **React**: Interfaz de usuario interactiva y responsive  
+- **React**: Interfaz de usuario interactiva y responsive
+- **Typescript**: Permite una experiencia más robusta y con tipado estático para prevenir errores.
 
 ---
 
@@ -51,5 +54,9 @@ Todo esto con el fin de **mejorar la eficiencia comercial** y **reducir los tiem
 - ✅ Sistema de Login y Autenticación  
 - ✅ Filtrado Avanzado de Inmuebles  
 - ✅ Ingeniería de Prompts para IA  
-- ✅ Sistema de Recomendaciones  
+- ✅ Sistema de Recomendaciones
+
+---
+
+
 
